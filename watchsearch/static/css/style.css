@@ -1,0 +1,117 @@
+body {
+  margin-bottom: 0;
+}
+@media (max-width: 600px) {
+  .parallax-container .section {
+    top: 30%;
+    font-size: 14px;
+  }
+}
+
+nav ul a,
+nav .brand-logo {
+  color: #6f3a61;
+}
+
+.parallax {
+  object-fit: fill;
+}
+.btn {
+  color: #ffffff;
+  background-color: #6f3a61;
+}
+.btn:hover {
+  color: #6f3a61;
+  background-color: #ffffff;
+}
+.btn-flat:hover,
+.btn-flat::after {
+  color: #ffffff;
+  background-color: #6f3a61;
+}
+.card {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.card-img-top {
+  margin-top: 5px;
+}
+p {
+  line-height: 1.8rem;
+}
+
+.breadcrumb {
+  list-style-type: none;
+  margin-left: 8%;
+  margin-top: 0%;
+}
+.sidenav-trigger {
+  color: #6f3a61;
+}
+
+.parallax-container {
+  min-height: 720px;
+  height: auto;
+  color: rgba(80, 23, 98, 0.9);
+}
+.parallax-container .section {
+  width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+#index-banner {
+width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 10px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+  color: #6f3a61;
+}
+.teal {
+  background-color: #6f3a61;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+#actor {
+  max-width: 70%;
+}
+#movie-image {
+  width: 20%;
+  padding: 10px;
+}
+
+#img-custom-circle-avatar {
+  position: absolute;
+  max-width: 20%;
+  place-self: center;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 2px;
+  z-index: 1;
+}

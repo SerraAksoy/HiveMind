@@ -1,0 +1,47 @@
+{% extends "base.html" %} {% load static %} {% block banner %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">
+      <a href="http://127.0.0.1:8000/movie/?q=&action=#">Ana Sayfa</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page" style="color: #ffff">
+      Arama Sonuçları
+    </li>
+  </ol>
+</nav>
+{% endblock %} {% block content %}
+
+<div
+  class="row"
+  style="
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  "
+>
+  {% for movie in movie_data %}
+  <div class="card" style="width: 17rem">
+    <a href="{% url 'movie-details' movie.imdb_id %}">
+      <img
+        src="{% if movie.poster_path %}https://image.tmdb.org/t/p/w185/{{ movie.poster_path }}{% else %}{% static 'img/default-poster.jpeg' %}{% endif %}"
+        class="card-img-top"
+        alt="Poster for {{ movie.title }}"
+      />
+    </a>
+    <div class="card-body">
+      <span class="card-title"
+        ><b><b>{{ movie.title }}</b></b></span
+      >
+      <p>{{ movie.overview|slice:":150" }}...</p>
+      <p><b>Yayın Tarihi: </b>{{ movie.release_date }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<a
+  href="{% url 'pagination' query page_number %}"
+  class="waves-effect btn-flat center-align"
+  >+Daha Fazla Yükle</a
+>
+{% endblock %}

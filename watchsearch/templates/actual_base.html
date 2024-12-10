@@ -1,0 +1,205 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- CSS  -->
+    <link
+      href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+      rel="stylesheet"
+      integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'css/materialize.css' %}"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="{% static 'css/style.css' %}"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    
+  </head>
+
+  <body>
+    <nav class="white" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">WatchSearch</a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a class="dropdown-trigger" href="#" data-target="profile-dropdown">
+              <img
+                src="{% static 'img/icons/profile1.jpg' %}"
+                alt="Profil"
+                style="
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 50%;
+                  margin-top: 10px;
+                "
+              />
+            </a>
+          </li>
+        </ul>
+        <ul id="profile-dropdown" class="dropdown-content" style="width: 150px">
+          <li>
+            <a href="{% url 'profile' %}"
+              ><i class="material-icons">portrait</i>Profil Görüntüle</a
+            >
+          </li>
+          <li>
+            <a href="#!"><i class="material-icons">lock</i>Şifre Değiştir</a>
+          </li>
+          <li class="divider" tabindex="-1"></li>
+          <li>
+            <a href="#!"><i class="material-icons">exit_to_app</i>Çıkış Yap</a>
+          </li>
+        </ul>
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="#">Navbar Link</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+      </div>
+    </nav>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="http://127.0.0.1:8000/movie/?q=&action=#">Ana Sayfa</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page" style="color: #ffff">
+            Arama Sonuçları
+       </li>
+        </ol>
+    </nav>
+    <div class="container">
+     <div class="section">{% block content %}<div class="container">
+      <div class="section">
+        <div class="row">
+          <div class="col s12 m7">
+            <div class="card">
+              <div class="card-image">
+                <img src="{% static 'img/profile_background.jpg' %}" />
+                <img
+                  id="img-custom-circle-avatar"
+                  src="{% static 'img/icons/profile1.jpg' %}"
+                  alt=""
+                />
+                <span class="card-title"><b>Yasemin Alagöz</b></span>
+              </div>
+              <div class="card-content">
+                <div class="row">
+                  <div class="col s12 m4">
+                    <ul class="collection">
+                      <li class="collection-item">
+                        <h5>Kullanıcı Bilgileri</h5>
+                      </li>
+                      <li class="collection-item">
+                        <b>Sosyal Medya:</b>
+                        <a href="https://www.instagram.com/yyaseminalagoz/"
+                          >Instagram</a
+                        >
+                      </li>
+                      <li class="collection-item">
+                        <b>Biyografi:</b> Merhaba! Film ve dizi izlemeyi çok
+                        severim, özellikle bilim kurgu ve dram favorim.Yeni
+                        yapımlar keşfetmek ve izlediklerim hakkında konuşmak
+                        benim için büyük bir keyif. Burada sizinle de fikir
+                        alışverişi yapmak için sabırsızlanıyorum!
+                      </li>
+                      <li style="color: dimgrey" class="collection-item">
+                        <b>Katılım Tarihi:</b> 18 Ekim 2023
+                      </li>
+                    </ul>
+                  </div>
+    
+                  <ul class="collection">
+                    <li class="collection-item avatar">
+                      <i class="material-icons circle orange">local_movies</i>
+                      <span class="title center-align">İzlenen Filmler</span>
+                      <p class="center-align"><b>45</b></p>
+                      <a href="#!" class="secondary-content"
+                        ><b>Listeyi Göster</b></a
+                      >
+                    </li>
+                    <li class="collection-item avatar">
+                      <i class="material-icons circle blue">add_to_queue</i>
+                      <span class="title center-align">İzlenen Diziler</span>
+                      <p class="center-align"><b>24</b></p>
+                      <a href="#!" class="secondary-content"
+                        ><b>Listeyi Göster</b></a
+                      >
+                    </li>
+                    <li class="collection-item avatar">
+                      <i class="material-icons circle pink">save</i>
+                      <span class="title center-align"
+                        >İzlemek İstediklerim</span
+                      >
+                      <p class="center-align"><b>56</b></p>
+                      <a href="#!" class="secondary-content"
+                        ><b>Listeyi Göster</b></a
+                      >
+                    </li>
+                    <li class="collection-item avatar">
+                      <i class="material-icons circle purple">rate_review</i>
+                      <span class="title center-align">Değerlendirilenler</span>
+                      <p class="center-align"><b>14</b></p>
+                      <a href="#!" class="secondary-content"
+                        ><b>Listeyi Göster</b></a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endblock %}</div>
+    </div>
+
+    <footer class="page-footer teal">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Serra Aksoy</h5>
+            <h5 class="white-text">Damla Göktaş</h5>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Ayarlar</h5>
+            <ul>
+              <li><a class="white-text" href="#!">Profil Ayarları</a></li>
+              <li><a class="white-text" href="#!">Gizlilik ve Güvenlik</a></li>
+              <li><a class="white-text" href="#!">Şikayet</a></li>
+            </ul>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">İletişim</h5>
+            <ul>
+              <li><a class="white-text" href="#!">Mail</a></li>
+              <li><a class="white-text" href="#!">Instagram</a></li>
+              <li><a class="white-text" href="#!">Telefon</a></li>
+              <li><a class="white-text" href="#!">Adres</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="{% static 'js/materialize.js' %}"></script>
+    <script src="{% static 'js/init.js' %}"></script>
+  </body>
+</html>
